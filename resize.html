@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>children</title>
+</head>
+<style type="text/css">
+    .sbPanel {
+        flex-grow: 1;
+    }
+
+    .sbTrack {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .sbRow {
+        flex-flow: row nowrap;
+    }
+
+    .sbColumn {
+        flex-flow: column nowrap;
+    }
+
+    .sbSplitter {
+        flex-grow: 0;
+        background-color: #C0C0C0;
+    }
+
+    .sbSplitter:hover {
+        background-color: #E0E0E0;
+    }
+
+    .sbHorizontal {
+        min-width: 100%;
+        min-height: 8px;
+        cursor: row-resize;
+    }
+
+    .sbVertical {
+        min-width: 8px;
+        min-height: 100%;
+        cursor: col-resize;
+    }
+</style>
+<style type="text/css">
+    body {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100vh;
+        max-height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .leaf {
+        flex-grow: 1;
+    }
+
+    .container {
+        flex-grow: 1;
+        margin: 1em;
+        border: 2px solid #808080;
+    }
+</style>
+
+
+<body>
+
+    <div class="container sbTrack sbColumn">
+
+        <div class=" sbTrack sbRow">
+            <div class="sbPanel" style="flex: 1 1 0px;">C</div>
+        </div>
+        <div class="sbSplitter sbHorizontal"></div>
+
+        <div class=" sbTrack sbRow">
+
+            <div class="sbPanel">D1</div>
+            <div class="sbSplitter sbVertical"> </div>
+
+            <div class=" sbTrack sbColumn">
+                <div class="sbPanel">E1</div>
+                <div class="sbSplitter sbHorizontal"></div>
+                <div class="sbPanel">E2</div>
+                <div class="sbSplitter sbHorizontal"></div>
+                <div class="sbPanel">E3</div>
+            </div>
+            <div class="sbSplitter sbVertical"></div>
+
+
+            <div>
+                <div class="sbPanel">D3</div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+<script src="resize.js"></script>
+
+</html>
