@@ -3,30 +3,33 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>children</title>
+    <title>layouts 4</title>
+    <link rel="stylesheet" href="CoCreateUI.min.css" type="text/css" />
 </head>
-<style type="text/css">
-    .sbPanel {
-        flex-grow: 1;
-    }
 
-    .sbTrack {
+<style type="text/css">
+    .sbRow {
         display: flex;
         flex-grow: 1;
-    }
-
-    .sbRow {
         flex-flow: row nowrap;
     }
 
     .sbColumn {
+        display: flex;
+        flex-grow: 1;
         flex-flow: column nowrap;
     }
 
-    .sbSplitter {
-        flex-grow: 0;
-        background-color: #C0C0C0;
+    .sbPanel {
+        overflow: hidden;
+        height: 100%;
     }
+
+
+    /*.sbSplitter {*/
+    /*    flex-grow: 0;*/
+    /*    background-color: #C0C0C0;*/
+    /*}*/
 
     .sbSplitter:hover {
         background-color: #E0E0E0;
@@ -43,6 +46,23 @@
         min-height: 100%;
         cursor: col-resize;
     }
+
+    .sbHorizontal.sbSplitter {
+        min-width: 100%;
+        min-height: 8px;
+        max-height: 8px;
+        cursor: row-resize;
+        background-color: #C0C0C0;
+
+    }
+
+    .sbVertical.sbSplitter {
+        min-width: 8px;
+        max-width: 8px;
+        min-height: 100%;
+        cursor: col-resize;
+        background-color: #C0C0C0;
+    }
 </style>
 <style type="text/css">
     body {
@@ -50,36 +70,16 @@
         flex-flow: column nowrap;
         height: 100vh;
         max-height: 100vh;
-        margin: 0;
-        padding: 0;
-    }
-
-    .leaf {
-        flex-grow: 1;
-    }
-
-    .container {
-        flex-grow: 1;
-        margin: 1em;
-        border: 2px solid #808080;
     }
 </style>
 
-
 <body>
 
-    <div class="container sbTrack sbColumn">
+    <div class="container sbColumn overflow-hidden card border-radius-2px width-auto margin-15px">
 
-        <div class=" sbTrack sbRow">
-            <div class="sbPanel" style="flex: 1 1 0px;">
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
-                    eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-                    voluptatibus.</p>
-            </div>
-        </div>
-        <div class=" sbTrack sbRow">
-            <div class=" sbTrack sbColumn">
+        <div class="sbRow height-50-percent">
+            <div class="sbColumn">
+
                 <div class="sbPanel">
                     <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
                         concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
@@ -88,64 +88,129 @@
                         voluptatibus.</p>
                 </div>
                 <div class="sbSplitter sbHorizontal"></div>
-                <div class="sbPanel" style="flex: 1 1 0px;">
+
+                <div class="sbPanel">
                     <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
                         concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
                         evertitur
                         eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
                         voluptatibus.</p>
                 </div>
+
             </div>
         </div>
         <div class="sbSplitter sbHorizontal"></div>
 
-        <div class=" sbTrack sbRow">
+        <div class="sbRow height-50-percent">
 
-            <div class="sbPanel">
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
-                    eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-                    voluptatibus.</p>
+            <div class="sbColumn">
+                <div class="sbPanel">
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                        concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
+                        evertitur
+                        eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                        voluptatibus.</p>
+                    T
+                </div>
             </div>
             <div class="sbSplitter sbVertical"> </div>
 
-            <div class=" sbTrack sbColumn">
+            <div class="sbColumn">
+
                 <div class="sbPanel">
                     <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
                         concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
                         evertitur
                         eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
                         voluptatibus.</p>
+                    A
                 </div>
                 <div class="sbSplitter sbHorizontal"></div>
+
                 <div class="sbPanel">
                     <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
                         concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
                         evertitur
                         eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
                         voluptatibus.</p>
+                    B
                 </div>
                 <div class="sbSplitter sbHorizontal"></div>
+
                 <div class="sbPanel">
                     <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
                         concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
                         evertitur
                         eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
                         voluptatibus.</p>
+                    C
+                </div>
+                <div class="sbSplitter sbHorizontal"></div>
+
+                <div class="sbPanel">
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                        concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
+                        evertitur
+                        eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                        voluptatibus.</p>
+                    D
+                </div>
+
+            </div>
+            <div class="sbSplitter sbVertical"></div>
+
+            <div class="sbColumn">
+                <div class="sbPanel height-25-percent">
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                        concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
+                        evertitur
+                        eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                        voluptatibus.</p>
+                    A
+                </div>
+                <div class="sbSplitter sbHorizontal"></div>
+
+                <div class="sbPanel height-25-percent">
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                        concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
+                        evertitur
+                        eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                        voluptatibus.</p>
+                    B
+                </div>
+                <div class="sbSplitter sbHorizontal"></div>
+
+                <div class="sbPanel height-25-percent">
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                        concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
+                        evertitur
+                        eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                        voluptatibus.</p>
+                    C
+                </div>
+                <div class="sbSplitter sbHorizontal"></div>
+
+                <div class="sbPanel height-25-percent">
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                        concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
+                        evertitur
+                        eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                        voluptatibus.</p>
+                    D
                 </div>
             </div>
             <div class="sbSplitter sbVertical"></div>
 
-
-            <div>
+            <div class="sbColumn">
                 <div class="sbPanel">
                     <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
                         concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
-                        evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-                        molestiae voluptatibus.</p>
+                        evertitur
+                        eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                        voluptatibus.</p>
+                    U
                 </div>
             </div>
-
 
         </div>
     </div>
